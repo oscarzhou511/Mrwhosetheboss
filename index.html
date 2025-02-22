@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrwhosetheboss - Your Tech Authority</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Reset and Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            /* Mrwhosetheboss's Blue */
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://pbs.twimg.com/media/CkA9syJWsAADHCe?format=jpg&name=4096x4096') no-repeat center center/cover;
+            height: 85vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .cta-buttons {
+            margin-top: 30px;
+        }
+
+        .cta-buttons a {
+            margin: 0 15px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-right: 50px;
+            text-align: left;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Socials Section */
+        .socials {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .socials .container {
+            text-align: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 2.5rem;
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #2980b9;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .about .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .about-content h2 {
+                text-align: center;
+            }
+
+            .social-icons a {
+                font-size: 2rem;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Mrwhosetheboss</h1>
+            <p>Your go-to source for in-depth tech reviews, comparisons, and insights. Bringing you the latest and
+                greatest in the world of technology.</p>
+            <div class="cta-buttons">
+                <a href="https://www.youtube.com/channel/UCMiJRAwDNSNzuYeN2uWa0pA" class="btn" target="_blank">Watch on
+                    YouTube</a>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Arun Maini</h2>
+                <p>Arun Rupesh Maini, better known as Mrwhosetheboss, is a leading English YouTuber renowned for his
+                    technology-focused content. He's the creator of one of the largest and most respected tech channels
+                    on YouTube.</p>
+                <p>Since his start, Arun has dedicated himself to delivering insightful and engaging reviews of the
+                    latest smartphones, gadgets, and tech innovations. His clear explanations, stunning visuals, and
+                    unwavering commitment to honesty have earned him a loyal global following.</p>
+                <p>Born on October 24, 1995, Arun has grown Mrwhosetheboss into a trusted and influential voice in the
+                    tech community. Stay updated on his journey and the exciting world of tech!</p>
+            </div>
+            <div class="about-image">
+                <img src="https://pbs.twimg.com/media/GiDQzeLWQAAe2fv?format=jpg&name=4096x4096"
+                    alt="Mrwhosetheboss (Arun Maini)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="socials">
+        <div class="container">
+            <h2 class="section-title">Connect with Mrwhosetheboss</h2>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/channel/UCMiJRAwDNSNzuYeN2uWa0pA" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/mrwhosetheboss/?hl=en" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/mrwhosetheboss?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/mrwhosetheboss/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@mrwhosetheboss?lang=en" target="_blank"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Mrwhosetheboss. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
