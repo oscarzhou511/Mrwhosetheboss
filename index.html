@@ -22,10 +22,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fff;
-            color: #333;
+            background-color: #121212;
+            color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Utility Classes */
@@ -37,32 +38,35 @@
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: #3498db;
-            /* Mrwhosetheboss's Blue */
+            padding: 14px 35px;
+            background-color: #f39c12;
             color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             border-radius: 8px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .section-title {
-            font-size: 2.8rem;
-            font-weight: 600;
+            font-size: 3rem;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 40px;
-            color: #2c3e50;
+            color: #f39c12;
+            letter-spacing: 0.5px;
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://pbs.twimg.com/media/CkA9syJWsAADHCe?format=jpg&name=4096x4096') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://pbs.twimg.com/media/CkA9syJWsAADHCe?format=jpg&name=4096x4096') no-repeat center center/cover;
             height: 85vh;
             color: white;
             display: flex;
@@ -74,7 +78,7 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -84,6 +88,8 @@
             font-size: 1.4rem;
             margin-bottom: 30px;
             max-width: 800px;
+            line-height: 1.8;
+            color: #eee;
         }
 
         .cta-buttons {
@@ -97,7 +103,8 @@
         /* About Section */
         .about {
             padding: 80px 0;
-            background-color: #f9f9f9;
+            background-color: #1c1c1c;
+            color: #ddd;
         }
 
         .about .container {
@@ -113,9 +120,9 @@
         }
 
         .about-content h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #f39c12;
             text-align: left;
         }
 
@@ -123,7 +130,6 @@
             font-size: 1.1rem;
             line-height: 1.7;
             margin-bottom: 20px;
-            color: #555;
         }
 
         .about-image {
@@ -133,12 +139,41 @@
         .about-image img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        /* Latest Video Section */
+        .latest-video {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #121212;
+            /* Match background */
+        }
+
+        .latest-video h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+            color: #f39c12;
+            /* Orange Title */
+        }
+
+        .latest-video img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .latest-video img:hover {
+            transform: scale(1.07);
+        }
+
 
         /* Socials Section */
         .socials {
-            background-color: #fff;
+            background-color: #121212;
             padding: 50px 0;
         }
 
@@ -150,24 +185,25 @@
             display: inline-block;
             margin: 0 20px;
             font-size: 2.5rem;
-            color: #3498db;
-            transition: color 0.3s ease;
+            color: #f39c12;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .social-icons a:hover {
-            color: #2980b9;
+            color: #e67e22;
+            transform: translateY(-3px);
         }
 
         /* Footer */
         .footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #1c1c1c;
+            color: #ddd;
             text-align: center;
             padding: 30px 0;
         }
 
         .footer a {
-            color: #ddd;
+            color: #f39c12;
             text-decoration: none;
             margin: 0 15px;
             transition: color 0.3s ease;
@@ -175,6 +211,54 @@
 
         .footer a:hover {
             color: white;
+        }
+
+        /* Light Theme Styles */
+        body.light-theme {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        body.light-theme .about {
+            background-color: #f0f0f0;
+            color: #555;
+        }
+
+        body.light-theme .socials {
+            background-color: #f9f9f9;
+        }
+
+        body.light-theme .footer {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        body.light-theme .section-title {
+            color: #3498db;
+        }
+
+        body.light-theme .about-content h2 {
+            color: #3498db;
+        }
+
+        body.light-theme .social-icons a {
+            color: #3498db;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #f39c12;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg);
         }
 
         /* Responsive Design */
@@ -210,11 +294,17 @@
                 font-size: 2rem;
                 margin: 0 10px;
             }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <i class="fas fa-adjust theme-toggle" onclick="toggleTheme()"></i>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -251,6 +341,16 @@
         </div>
     </section>
 
+    <!-- Latest Video Section -->
+    <section class="latest-video" id="latest-video">
+        <div class="container">
+            <h2 class="section-title">Latest Video</h2>
+            <a href="https://www.youtube.com/watch?v=DnY6J7YAsGg" target="_blank">
+                <img src="https://img.youtube.com/vi/DnY6J7YAsGg/maxresdefault.jpg" alt="Latest Video Thumbnail">
+            </a>
+        </div>
+    </section>
+
     <!-- Socials Section -->
     <section class="socials">
         <div class="container">
@@ -274,6 +374,12 @@
             <p>© 2024 Mrwhosetheboss. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+        }
+    </script>
 
 </body>
 
